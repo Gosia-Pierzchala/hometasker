@@ -8,15 +8,15 @@ import java.util.List;
 
 @Controller
 public class TaskController {
-    private TaskRepository taskRepository;
+    private TaskAndPeopleRepository taskAndPeopleRepository;
 
-    public TaskController(TaskRepository taskRepository) {
-        this.taskRepository = taskRepository;
+    public TaskController(TaskAndPeopleRepository taskAndPeopleRepository) {
+        this.taskAndPeopleRepository = taskAndPeopleRepository;
     }
 
     @GetMapping("/")
     public String taskList(Model model){
-        List<Task> tasks = taskRepository.getAll();
+        List<Task> tasks = taskAndPeopleRepository.getAll();
         model.addAttribute("allTasks", tasks);
         return "homepage";
     }
