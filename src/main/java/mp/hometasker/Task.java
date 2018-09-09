@@ -8,6 +8,9 @@ public class Task {
     private int punkty;
     private LocalDateTime terminWykonania;
 
+    public Task(){
+    }
+
     public Task(String opis, Person osoba, int punkty, LocalDateTime terminWykonania) {
         this.opis = opis;
         this.osoba = osoba;

@@ -3,6 +3,9 @@ package mp.hometasker;
 public class Person {
     private String imie;
 
+    public Person(){
+    }
+
     public Person(String imie) {
         this.imie = imie;
     }

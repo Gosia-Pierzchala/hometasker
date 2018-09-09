@@ -52,4 +52,12 @@ public class TaskAndPeopleRepository {
         people.remove(person);
     }
 
+    public Task findByDescription(String opis) {
+        for (Task task: tasks) {
+            if(task.getOpis().equals(opis)) {
+                return task;
+            }
+        }
+        return null;
+    }
 }
