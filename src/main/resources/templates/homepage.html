@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hometasker</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>Opis</th>
+        <th>Osoba</th>
+        <th>Punkty</th>
+        <th>Termin wykonania</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task: ${allTasks}">
+        <td th:text="${task.opis}"></td>
+        <td th:text="${task.osoba}"></td>
+        <td th:text="${task.punkty}"></td>
+        <td th:datetime-local="${task.terminWykonania}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
